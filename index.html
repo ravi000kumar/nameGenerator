@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random nameGenerator</title>
+    <style>
+        h4,span,button{
+            margin: 0;
+        }
+        h4{
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Random nameGenerator</h1>
+    </center>
+    <center>
+        <h4>Generated names:</h4>
+        <span id="names"></span>
+    </center>
+    <center><button onclick="generateToName()">Generate name</button></center>
+    <script>
+        let resultNames = document.getElementById('names');
+        let innerName;
+        const namesGenerate = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", 'Ravi', 'Rohan', 'Mohan', 'Sohan', "sunny",'pinku'];
+        function generateTheName(){
+            // innerName =  resultNames.innerText = ':'
+            let generated = namesGenerate[Math.floor(Math.random() * namesGenerate.length)];
+            return generated
+        }
+        function generateToName(){
+            let generate = generateTheName()
+            resultNames.innerHTML = generate;
+        }
+    </script>
+</body>
+
+</html>
